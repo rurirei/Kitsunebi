@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/is_enable_per_app_vpn"
+        android:title="Enable Per-App VPN" />
+
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/per_app_modes"
+        android:entryValues="@array/per_app_modes_values"
+        android:key="@string/per_app_mode"
+        android:summary="> %s\nYou may either use the allowed list or the disallowed list, but not both."
+        android:title="Per-App Mode" />
+
+    <Preference
+        android:summary="Selected apps are allowed to use the VPN tunnel, others are disallowed."
+        android:title="@string/allowed_list">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="fun.kitsunebi.kitsunebi4android.ui.perapp.AppListActivity"
+            android:targetPackage="io.github.rurirei.kitsunebi">
+            <extra
+                android:name="per_app_mode"
+                android:value="0" />
+        </intent>
+    </Preference>
+
+    <Preference
+        android:summary="Selected apps are disallowed to use the VPN tunnel, others will be allowed."
+        android:title="@string/disallowed_list">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="fun.kitsunebi.kitsunebi4android.ui.perapp.AppListActivity"
+            android:targetPackage="io.github.rurirei.kitsunebi">
+            <extra
+                android:name="per_app_mode"
+                android:value="1" />
+        </intent>
+    </Preference>
+
+    <Preference
+        android:summary="press to export the Per-app list rule"
+        android:title="@string/export_list"
+        android:key="@string/export_list">
+    </Preference>
+
+    <Preference
+        android:summary="press to import the Per-app list rule"
+        android:title="@string/import_list"
+        android:key="@string/import_list">
+    </Preference>
+</PreferenceScreen>

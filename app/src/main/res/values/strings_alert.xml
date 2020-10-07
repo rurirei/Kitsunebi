@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vpn_started">Start VPN service started</string>
+    <string name="vpn_stopped">Start VPN service stopped</string>
+    <string name="pong">Start VPN service pong</string>
+    <string name="vpn_start_err">Start VPN service failed</string>
+    <string name="vpn_start_err_dns">Start VPN service failed: Not configuring DNS right, must has at least 1 dns server and must not include "localhost"</string>
+    <string name="vpn_start_err_config">Start VPN service failed: Invalid V2Ray config</string>
+    <string name="invalid_json">Invalid JSON</string>
+
+    <string name="del_config_comfirm">Confirm delete？</string>
+    <string name="toast_success">Success</string>
+    <string name="toast_failure">Failure</string>
+</resources>
