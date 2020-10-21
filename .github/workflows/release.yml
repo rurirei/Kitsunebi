@@ -30,7 +30,7 @@ jobs:
 
     - name: Signing Generator
       run: |
-        keytool -genkey -v -keystore release.keystore -alias kitsunebi-android -storepass prelease-keystore -keypass prelease-key -keyalg RSA -keysize 2048 -validity 100000
+        keytool -genkey -v -keystore release.keystore -alias kitsunebi -storepass example -keypass example -keyalg RSA -keysize 2048 -validity 100000
         openssl base64 < release.keystore | tr -d '\n' | tee key.base64.txt
         echo key.base64.txt
 
@@ -39,9 +39,9 @@ jobs:
       with:
         releaseDirectory: app/build/outputs/apk/release
         signingKeyBase64: yu7acOeOjYV4lqVolkYgNA==
-        alias: kitsunebi-android
-        keyStorePassword: prelease-keystore
-        keyPassword: prelease-key
+        alias: kitsunebi
+        keyStorePassword: example
+        keyPassword: example
 
     - name: Get Release Tag
       run: |
