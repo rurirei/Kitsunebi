@@ -38,13 +38,14 @@ jobs:
         ./gradlew assembleRelease
 
     - name: Get Release Tag
-      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      run: |
+        echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
     - name: Upload tha APK to the Release on Github
       uses: meeDamian/github-release@2.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         tag: ${{ env.RELEASE_VERSION }}
-          files: ${{ env.SIGNED_RELEASE_FILE }}
-          allow_override: false
-          gzip: false
+        files: ${{ env.SIGNED_RELEASE_FILE }}
+        allow_override: false
+        gzip: false
