@@ -23,10 +23,16 @@ jobs:
       with:
         java-version: 1.8
 
-    - name: Build
+    - name: Release Build
       run: |
         chmod +x ./gradlew
         ./gradlew assembleRelease
+
+    - name: Signing Generator
+      run: |
+        keytool -genkey -v -keystore release.keystore -alias kitsunebi-android -storepass prelease-keystore -keypass prelease-key -keyalg RSA -keysize 2048 -validity 100000
+        openssl base64 < release.keystore | tr -d '\n' | tee key.base64.txt
+        echo key.base64.txt
 
     - name: Signing Android Build
       uses: r0adkll/sign-android-release@v1
