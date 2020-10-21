@@ -23,15 +23,10 @@ jobs:
       with:
         java-version: 1.8
 
-    - name: Cache Data
-      uses: actions/cache@v2
-      with:
-        path: ~/.actions-cache
-        key: caches
-        restore-keys: |
-          caches
-
     - name: Setup Android Build
       uses: vgaidarji/android-github-actions-build@v1.0.1
-      with:
-        args: "./gradlew assembleDebug"
+
+    - name: Build
+      run: |
+        chmod +x ./gradlew
+        ./gradlew assembleRelease
