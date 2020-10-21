@@ -4,7 +4,7 @@
     package="fun.kitsunebi.kitsunebi4android">
 
     <!-- Android 11 Package Visibility -->
-    <!--<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />-->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <!-- TODO: start with booting-->
@@ -21,7 +21,7 @@
         android:roundIcon="@mipmap/ic_kitsunebi"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:extractNativeLibs="false"
+        android:extractNativeLibs="true"
         tools:replace="allowBackup">
 
         <activity
