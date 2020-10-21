@@ -30,7 +30,7 @@ jobs:
 
     - name: Signing Generator
       run: |
-        keytool -genkey -v -keystore release.keystore -alias kitsunebi -storepass example -keypass example -keyalg RSA -keysize 2048 -validity 100000
+        echo y | keytool -genkeypair -dname "cn=example, ou=example, o=example, c=example" -keystore release.keystore -alias kitsunebi -storepass example -keypass example -keyalg RSA -keysize 2048 -validity 100000
         openssl base64 < release.keystore | tr -d '\n' | tee key.base64.txt
         echo key.base64.txt
 
