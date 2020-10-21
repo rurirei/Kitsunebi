@@ -23,7 +23,12 @@ jobs:
       with:
         java-version: 1.8
 
-    - name: Setup Android Build
+    - name: Build
+      run: |
+        chmod +x ./gradlew
+        ./gradlew assembleRelease
+
+    - name: Signing Android Build
       uses: r0adkll/sign-android-release@v1
       with:
         releaseDirectory: app/build/outputs/apk/release
@@ -31,11 +36,6 @@ jobs:
         alias: kitsunebi-android
         keyStorePassword: prelease-keystore
         keyPassword: prelease-key
-
-    - name: Build
-      run: |
-        chmod +x ./gradlew
-        ./gradlew assembleRelease
 
     - name: Get Release Tag
       run: |
