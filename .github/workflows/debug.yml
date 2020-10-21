@@ -3,7 +3,7 @@ name: debug
 on:
   push:
     branches:
-      - gobuild
+      - gobuildx
   pull_request:
     branches:
       - gobuild
