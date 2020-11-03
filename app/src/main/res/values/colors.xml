@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#121212</color>
+    <color name="colorPrimaryDark">#121212</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorDirectTag">#46a36e</color>
+    <color name="colorProxyTag">#454da2</color>
+    <color name="colorBlockTag">#f4425f</color>
+    <color name="colorDefaultText">#808080</color>
+
+    <color name="colorPing">#185534</color>
+</resources>

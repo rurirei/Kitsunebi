@@ -1,0 +1,45 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/config_btn"
+        android:title="@string/config_btn">
+        <menu>
+            <item
+                android:id="@+id/new_clipboard_btn"
+                android:title="@string/new_clipboard_btn" />
+            <item
+                android:id="@+id/new_file_btn"
+                android:title="@string/new_file_btn" />
+            <item
+                android:id="@+id/new_manually_btn"
+                android:title="@string/new_manually_btn" />
+            <!--<item
+                android:id="@+id/format_btn"
+                android:title="@string/format_btn" />
+            <item
+                android:id="@+id/save_btn"
+                android:title="@string/save_btn" />-->
+            <!--<item
+                android:id="@+id/subscribe_config_btn"
+                android:title="@string/subscribe_btn" />-->
+        </menu>
+    </item>
+    <!--<item
+        android:id="@+id/log_btn"
+        android:title="@string/log_btn">
+        <menu>
+            <item
+                android:id="@+id/proxy_btn"
+                android:title="@string/proxy_btn" />
+            &lt;!&ndash;<item
+                android:id="@+id/logcat_btn"
+                android:title="@string/logcat_btn" />&ndash;&gt;
+        </menu>
+    </item>-->
+    <item
+        android:id="@+id/settings_btn"
+        android:title="@string/settings_btn" />
+    <!--<item
+        android:id="@+id/help_btn"
+        android:title="@string/help_btn" />-->
+</menu>

@@ -1,0 +1,25 @@
+<!-- You can ignore any parts of this template not applicable to your Issue. -->
+
+## Bug Report
+
+ ### what is your environment info (mobile system, app version, etc)?
+
+ ### what is your problem meet?
+
+ ### if problem reproducible? to describe reproduce steps in details.
+
+ ### paste running logs here or paste.ubuntu.com
+ ```
+   <!-- call `adb logcat -s io.github.rurirei.kitsunebi GoLog ConnectivityService ActivityManager` -->
+
+   <!-- paste it here -->
+ ```
+
+ ### paste your configuration here
+ ```json
+   <!-- paste it here (remove your server info as well) -->
+ ```
+
+
+## Feature Request
+ open your request before check this [TODO List](https://github.com/rurirei/Kitsunebi/issues/4)
