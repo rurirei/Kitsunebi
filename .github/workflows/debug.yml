@@ -1,0 +1,42 @@
+name: debug
+
+on:
+  push:
+    branches:
+      - debug
+  pull_request:
+    branches:
+      - debug
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-18.04
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Setup Android Build
+        uses: vgaidarji/android-github-actions-build@v1.0.1
+
+      - name: Version Tag
+        run: |
+          echo "VERSION=v4.32.0" >> $GITHUB_ENV
+
+      - name: Update Core
+        run: |
+          curl -L -o app/libs/libv2ray.aar.zip https://github.com/rurirei/go-libv2ray/releases/download/${{ env.VERSION }}/libv2ray.aar.zip
+          pushd app/libs/ && unzip -o libv2ray.aar.zip && popd
+          echo $(ls -l app/libs/libv2ray.aar)
+
+      - name: Debug Build
+        run: |
+          chmod +x ./gradlew
+          ./gradlew assembleDebug
