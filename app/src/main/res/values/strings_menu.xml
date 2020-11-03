@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_btn">Config</string>
+    <string name="log_btn">Log</string>
+    <string name="save_btn">Save</string>
+    <string name="new_clipboard_btn">from clipboard</string>
+    <string name="new_file_btn">from file</string>
+    <string name="new_manually_btn">from manually</string>
+    <string name="subscribe_btn">Subscribe</string>
+    <string name="proxy_btn">Proxy Log</string>
+    <string name="logcat_btn">Logcat Log</string>
+    <string name="settings_btn">Settings</string>
+    <string name="help_btn">Help</string>
+    <string name="clear_btn">Clear</string>
+    <string name="copy_btn">Copy</string>
+</resources>

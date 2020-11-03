@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_server">Configuration file</string>
+    <string name="server_lab_remarks">remarks</string>
+    <string name="server_lab_content">Content</string>
+    <string name="menu_item_add_config">Add config</string>
+    <string name="menu_item_save_config">Save config</string>
+    <string name="menu_item_del_config">Delete config</string>
+</resources>

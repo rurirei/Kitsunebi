@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/title_application">
+        <Preference
+            android:summary="Configure Per-App VPN."
+            android:title="Per-App VPN">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="fun.kitsunebi.kitsunebi4android.ui.perapp.PerAppActivity"
+                android:targetPackage="io.github.rurirei.kitsunebi" />
+        </Preference>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pref_proxy_only"
+            android:summary="@string/summary_pref_proxy_only"
+            android:title="@string/title_pref_proxy_only" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pref_parse_domain_next_enabled"
+            android:summary="@string/summary_pref_parse_domain_next_enabled"
+            android:title="@string/title_pref_parse_domain_next_enabled" />
+        <ListPreference
+            android:defaultValue="none"
+            android:entries="@array/log_level_value"
+            android:entryValues="@array/log_level_value"
+            android:key="pref_log_level"
+            android:summary="@string/summary_pref_log_level"
+            android:title="@string/title_pref_log_level" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/title_advanced">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pref_fake_dns"
+            android:summary="@string/summary_pref_fake_dns"
+            android:title="@string/title_pref_fake_dns" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/title_about">
+        <Preference
+            android:key="pref_version"
+            android:title="@string/title_pref_version" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
