@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="fun.kitsunebi.kitsunebi4android">
+
+    <!-- Android 11 Package Visibility -->
+    <!--<uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />-->
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- TODO: start with booting-->
+    <!--<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.v2ray.ang.AngApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_kitsunebi"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_kitsunebi"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:extractNativeLibs="false"
+        tools:replace="allowBackup">
+
+        <activity
+            android:name="fun.kitsunebi.kitsunebi4android.ui.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="fun.kitsunebi.kitsunebi4android.ui.settings.SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName="fun.kitsunebi.kitsunebi4android.ui.MainActivity">
+        </activity>
+
+        <activity
+            android:name="fun.kitsunebi.kitsunebi4android.ui.perapp.PerAppActivity"
+            android:label="Per-App VPN"
+            android:parentActivityName="fun.kitsunebi.kitsunebi4android.ui.settings.SettingsActivity">
+        </activity>
+
+        <activity
+            android:name="fun.kitsunebi.kitsunebi4android.ui.perapp.AppListActivity"
+            android:label="App List"
+            android:parentActivityName="fun.kitsunebi.kitsunebi4android.ui.perapp.PerAppActivity">
+        </activity>
+
+        <activity
+            android:name="fun.kitsunebi.kitsunebi4android.ui.servers.ServerDetailActivity"
+            android:windowSoftInputMode="stateUnchanged" />
+
+        <service
+            android:name="io.github.rurirei.v2rayng.service.V2RayProxyService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="@string/app_name">
+        </service>
+
+        <service
+            android:name="io.github.rurirei.v2rayng.service.V2RayVpnService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.net.VpnService.SUPPORTS_ALWAYS_ON"
+                android:value="true" />
+        </service>
+
+    </application>
+</manifest>

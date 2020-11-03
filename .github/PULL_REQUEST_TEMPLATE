@@ -1,0 +1,11 @@
+### Baseline Guide
+welcome for your pull request with those requirements:
+ - language: `kotlin` preferred for android platform, `golang` only for native implementation
+ - style: clean code, no deprecated or dirty method
+ - sdk: complete support for api 28 and above
+ - commit: use at base branch [debug](https://github.com/rurirei/kitsunebi/tree/debug)
+
+### Endline Confirmation
+* [ ] Does your submission pass test of github-actions inside [debug branch](https://github.com/rurirei/kitsunebi/tree/debug)?
+* [ ] Have you added an explanation of what changed?
+* [ ] Have you tested locally and remotely?
