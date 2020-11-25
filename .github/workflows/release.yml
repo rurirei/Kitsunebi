@@ -1,12 +1,12 @@
-name: release
+name: release_xtls
 
 on:
   push:
     branches:
-      - release
+      - release_xtls
   pull_request:
     branches:
-      - release
+      - release_xtls
 
 jobs:
 
@@ -25,7 +25,9 @@ jobs:
 
       - name: Version Tag
         run: |
-          echo "VERSION=v4.33.0" >> $GITHUB_ENV
+          echo "VERSION=v1.0.0" >> $GITHUB_ENV
+          echo "VERSIONTAG=xtls."${{ env.VERSION }} >> $GITHUB_ENV
+          echo "VERSIONNAME=xtls/xray-core "${{ env.VERSION }} >> $GITHUB_ENV
 
       - name: Update Core
         run: |
@@ -60,7 +62,8 @@ jobs:
         uses: meeDamian/github-release@2.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ env.VERSION }}
+          tag: ${{ env.VERSIONTAG }}
+          name: ${{ env.VERSIONNAME }}
           files: ${{ steps.sign_app.outputs.signedReleaseFile }}
           allow_override: true
           gzip: false
