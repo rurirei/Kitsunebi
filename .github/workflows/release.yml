@@ -26,6 +26,8 @@ jobs:
       - name: Version Tag
         run: |
           echo "VERSION=v4.33.0" >> $GITHUB_ENV
+          echo "VERSIONTAG=v4.33.0" >> $GITHUB_ENV
+          echo "VERSIONNAME=v2fly/v2ray-core v4.33.0" >> $GITHUB_ENV
 
       - name: Update Core
         run: |
@@ -60,7 +62,8 @@ jobs:
         uses: meeDamian/github-release@2.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ env.VERSION }}
+          tag: ${{ env.VERSIONTAG }}
+          name: ${{ env.VERSIONNAME }}
           files: ${{ steps.sign_app.outputs.signedReleaseFile }}
           allow_override: true
           gzip: false
