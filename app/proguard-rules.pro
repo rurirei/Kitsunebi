@@ -23,3 +23,5 @@
 #noinspection ShrinkerUnresolvedReference
 
 -keep class libv2ray.** { *;}
+
+-dontobfuscate
