@@ -31,7 +31,7 @@ jobs:
 
       - name: Update Core
         run: |
-          curl -L -o app/libs/libv2ray.aar.zip https://github.com/rurirei/go-libv2ray/releases/download/${{ env.VERSION }}/libv2ray.aar.zip
+          curl -L -o app/libs/libv2ray.aar.zip https://github.com/rurirei/go-libv2ray/releases/download/${{ env.VERSIONTAG }}/libv2ray.aar.zip
           pushd app/libs/ && unzip -o libv2ray.aar.zip && popd
           echo $(ls -l app/libs/libv2ray.aar)
 
