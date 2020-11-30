@@ -28,7 +28,7 @@ jobs:
 
       - name: Version Tag
         run: |
-          echo "VERSION=v4.32.0" >> $GITHUB_ENV
+          echo "VERSION=xtls.v1.0.0" >> $GITHUB_ENV
 
       - name: Update Core
         run: |
