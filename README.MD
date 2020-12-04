@@ -1,5 +1,5 @@
 ## Rewrite: Kitsunebi
-![debug](https://github.com/rurirei/kitsunebi/workflows/debug/badge.svg?branch=debug) ![release](https://github.com/rurirei/kitsunebi/workflows/release/badge.svg?branch=build)
+![debug](https://github.com/rurirei/kitsunebi/workflows/debug/badge.svg?branch=debug) ![release](https://github.com/rurirei/kitsunebi/workflows/release_xtls/badge.svg?branch=release_xtls)
 
 client on Android 8.0 up to 11, simply based and rewrite on [eycorsican/kitsunebi-android](https://github.com/eycorsican/kitsunebi-android). shorten name to `Re:Kit` (undefined).
 
