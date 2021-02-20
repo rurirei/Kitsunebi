@@ -10,7 +10,7 @@ client on Android 8.0 up to 11, simply based and rewrite on [eycorsican/kitsuneb
 - TODO [#4](https://github.com/rurirei/kitsunebi/issues/4)
 
 ### Credits
-- [v2fly/v2ray-core](https://github.com/v2fly/v2ray-core)
+- [xtls/xray-core](https://github.com/xtls/xray-core)
 - [2dust/v2rayNG](https://github.com/2dust/v2rayNG)
 - [eycorsican/kitsunebi-android](https://github.com/eycorsican/kitsunebi-android)
 - [rurirei/go-libv2ray](https://github.com/rurirei/go-libv2ray)
