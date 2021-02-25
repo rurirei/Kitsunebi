@@ -25,9 +25,9 @@ jobs:
 
       - name: Version Tag
         run: |
-          echo "VERSION=v4.33.0" >> $GITHUB_ENV
-          echo "VERSIONTAG=v4.33.0" >> $GITHUB_ENV
-          echo "VERSIONNAME=v2fly/v2ray-core v4.33.0" >> $GITHUB_ENV
+          echo "VERSION=v4.35.0" >> $GITHUB_ENV
+          echo "VERSIONTAG=v4.35.0" >> $GITHUB_ENV
+          echo "VERSIONNAME=v2fly/v2ray-core v4.35.0" >> $GITHUB_ENV
 
       - name: Update Core
         run: |
