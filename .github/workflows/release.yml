@@ -25,9 +25,9 @@ jobs:
 
       - name: Version Tag
         run: |
-          echo "VERSION=v1.3.0" >> $GITHUB_ENV
-          echo "VERSIONTAG=xtls.v1.3.0" >> $GITHUB_ENV
-          echo "VERSIONNAME=xtls/xray v1.3.0" >> $GITHUB_ENV
+          echo "VERSION=v1.3.2" >> $GITHUB_ENV
+          echo "VERSIONTAG=xtls.v1.3.2" >> $GITHUB_ENV
+          echo "VERSIONNAME=xtls/xray v1.3.2" >> $GITHUB_ENV
 
       - name: Update Core
         run: |
