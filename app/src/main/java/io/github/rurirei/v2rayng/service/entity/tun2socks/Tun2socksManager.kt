@@ -27,9 +27,8 @@ class Tun2socksManager(private val context: Context) {
     val logLevel: String get() =
             context.sharedPreferences.get(SettingsFragment.PREF_LOG_LEVEL, "info")
 
-    // do not use IPv6 until now
     val useIPv6: Boolean get() =
-            false
+            true
 
     val useFakeDns: Boolean get() =
             context.sharedPreferences.get(PREF_FAKE_DNS, false)
