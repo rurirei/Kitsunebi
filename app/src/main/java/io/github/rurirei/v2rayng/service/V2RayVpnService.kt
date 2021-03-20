@@ -6,7 +6,6 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.content.res.Resources
 import android.net.*
 import android.os.Build
 import android.os.ParcelFileDescriptor
@@ -22,7 +21,6 @@ import io.github.rurirei.v2rayng.util.NotificationUtil
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.nio.ByteBuffer
@@ -132,31 +130,12 @@ class V2RayVpnService: VpnService(), IVPNService, ITun2socksService {
         // Configure a builder while parsing the parameters.
         val builder = Builder().apply {
             addAddress("172.19.0.1", 30)
+            addRoute("0.0.0.0", 0)
             addDnsServer("8.8.8.8")
             if (tun2socksManager.useIPv6) {
                 addAddress("fdfe:dcba:9876::1", 126)
                 addRoute("::", 0)
                 addDnsServer("2001:4860:4860::8888")
-            }
-            if (tun2socksManager.useFakeDns) {
-                try {
-                    resources.getStringArray(R.array.bypass_private_route).forEach { each ->
-                        each.split(File.separator.toPattern(), 2).let {
-                            addRoute(it[0], Integer.parseInt(it[1]))
-                        }
-                    }
-                    addRoute("198.18.0.0", 16)
-                } catch (e: Resources.NotFoundException) {
-                    e.printStackTrace()
-                    stopV2Ray()
-                    return
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                    stopV2Ray()
-                    return
-                }
-            } else {
-                addRoute("0.0.0.0", 0)
             }
             setMtu(1500)
             setSession(BuildConfig.APPLICATION_ID)
