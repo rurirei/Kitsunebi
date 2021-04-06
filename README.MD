@@ -2,7 +2,7 @@
 ![API](https://img.shields.io/badge/API-26%2B-green.svg?style=flat) [![CodeFactor](https://www.codefactor.io/repository/github/rurirei/kitsunebi/badge)](https://www.codefactor.io/repository/github/rurirei/kitsunebi)  
 ![debug](https://github.com/rurirei/kitsunebi/workflows/debug/badge.svg?branch=debug) ![release](https://github.com/rurirei/kitsunebi/workflows/release/badge.svg?branch=release)
 
-client on Android 8.0 up to 11, simply based and rewrite on [eycorsican/kitsunebi-android](https://github.com/eycorsican/kitsunebi-android). Its shorten name to `ReKit, RKT, rkt` (undefined).
+client on Android 8.0 up to 11, simply based and rewrite on [eycorsican/kitsunebi-android](https://github.com/eycorsican/kitsunebi-android). Its shorten name to `ReKit, RKT, rkt` (defined).
 
 ### Features
 - [rurirei/go-libv2ray](https://github.com/rurirei/go-libv2ray)
